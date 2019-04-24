@@ -24,6 +24,8 @@ public class treeScript : MonoBehaviour
 
     mouseContoller mC;
 
+    public bool didAdd; // adds to treesCut only ONCE
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -55,7 +57,12 @@ public class treeScript : MonoBehaviour
 
         if (treeHP <= 0)
         {
-            mC.treesCut += 1;
+            if (!didAdd)
+            {
+                mC.treesCut += 1;
+                didAdd = true;
+            }
+
             if (sp.color != deathColor)
             {
                 sp.color = Color.Lerp(deathColor, sp.color, changeColor_SPD);

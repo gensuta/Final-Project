@@ -14,6 +14,11 @@ public class mouseContoller : MonoBehaviour
 
     treeManager tM;
 
+    public float dist2Tree; // the distance between the tree and the mouse
+
+    public Vector3 leftPos; // the stored pos before moving leftward
+    public Vector3 rightPos; // the stored pos before moving rightward
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +39,11 @@ public class mouseContoller : MonoBehaviour
 
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //getting where your mouse is in the actual game
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); // turning that vector 3 into a vector 2 for raycasting sake
+
+
+            dist2Tree = Vector2.Distance(mousePos2D, tM.treeObjects[treesCut].transform.position);
+
+           // Debug.Log(dist2Tree);
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //storing what we may have hit via raycasting!
 
