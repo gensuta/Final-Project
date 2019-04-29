@@ -49,28 +49,27 @@ public class treeScript : MonoBehaviour
 
         if (treeHP <= 0)
         {
-            //if (!didAdd)
-            //{
-            //    mC.treesCut += 1;
-            //    didAdd = true;
-            //}
-            //Destroy(gameObject,1f);
-            mC.treesCut += 1;
-            Destroy(gameObject);
+            if (!didAdd)
+            {
+                mC.treesCut += 1;
+                Debug.Log("u got wood!");
+                didAdd = true;
+            }
+            Destroy(gameObject,1f);
         }
     }
 
     private void FixedUpdate()
     {
-        if (sp.color != deathColor)
+        if (sp.color != deathColor && didAdd)
         {
             sp.color = Color.Lerp(deathColor, sp.color, changeColor_SPD);
         }
-        if (sp.color != notCurrent_COL)
+        if (sp.color != notCurrent_COL && !isCurrentTree)
         {
             sp.color = Color.Lerp(notCurrent_COL, sp.color, changeColor_SPD);
         }
-        if (sp.color != currentTree_COL)
+        if (sp.color != currentTree_COL && isCurrentTree)
         {
             sp.color = Color.Lerp(currentTree_COL, sp.color, changeColor_SPD);
         }

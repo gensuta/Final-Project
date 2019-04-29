@@ -99,7 +99,9 @@ MonoBehaviour:
   treeHP: 0
   currentTree_COL: {r: 1, g: 1, b: 1, a: 1}
   notCurrent_COL: {r: 0.18158396, g: 0.15218937, b: 0.18867922, a: 1}
-  changeColor_SPD: 0.5
+  deathColor: {r: 0, g: 0, b: 0, a: 0}
+  changeColor_SPD: 0.1
+  didAdd: 0
 --- !u!61 &619624739702449785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113,7 +115,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06903207, y: -1.6568146}
+  m_Offset: {x: 0.06903207, y: -1.8409042}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -124,5 +126,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1994493, y: 4.445467}
+  m_Size: {x: 1.1994493, y: 5.8261433}
   m_EdgeRadius: 0
