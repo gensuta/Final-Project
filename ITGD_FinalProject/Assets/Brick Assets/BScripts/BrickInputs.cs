@@ -8,7 +8,8 @@ public class BrickInputs : MonoBehaviour
     public bool isTop = true;
     public bool brickDone = true;
     public GameObject Brick;
-    Vector2 newPos;
+    public int brickCount;
+    public Vector3 newPos;
 
     public int topRow;
     public int botRow;
@@ -16,6 +17,7 @@ public class BrickInputs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        brickCount = 0;
         CutWood();
     }
 
@@ -93,7 +95,7 @@ public class BrickInputs : MonoBehaviour
             phase = 5;
         }
 
-        if (topRow == 0 && !isTop)
+        if (botRow == 0 && !isTop)
         {
             if (phase == 5 && !isTop && Input.GetKeyDown(KeyCode.Q))
             {
@@ -154,19 +156,26 @@ public class BrickInputs : MonoBehaviour
             }
         }
 
-        if (phase == 8)
+        if (phase == 8 && Input.GetKeyDown(KeyCode.Space))
         {
+            brickCount++;
             CutWood();
-
+            
         }
 
     }
 
     void CutWood()
     {
-        newPos = new Vector2(0f, -1.5f);
-        topRow = Random.Range(0, 3);
-        botRow = Random.Range(0, 3);
-        Instantiate(Brick,newPos);
+        float bC = (float)brickCount;
+        float nextBrick = Brick.GetComponent<BoxCollider2D>().size.x;
+        Debug.Log("bC: " + bC);
+        Debug.Log("nextBrick: " + nextBrick);
+        newPos = new Vector3(0 + (bC * nextBrick * 15), -1.5f);
+        topRow = Random.Range(0, 4);
+        botRow = Random.Range(0, 4);
+        Instantiate(Brick, newPos, Quaternion.identity);
+        phase = 1;
+        isTop = true;
     }
 }
