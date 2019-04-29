@@ -40,19 +40,11 @@ public class treeScript : MonoBehaviour
         if (isCurrentTree)
         {
             bc.enabled = true;
-            if (sp.color != currentTree_COL)
-            {
-                sp.color = Color.Lerp(currentTree_COL, sp.color, changeColor_SPD);
-            }
         }
 
         else
         {
             bc.enabled = false;
-            if (sp.color != notCurrent_COL)
-            {
-                sp.color = Color.Lerp(notCurrent_COL, sp.color, changeColor_SPD);
-            }
         }
 
         if (treeHP <= 0)
@@ -62,12 +54,23 @@ public class treeScript : MonoBehaviour
                 mC.treesCut += 1;
                 didAdd = true;
             }
-
-            if (sp.color != deathColor)
-            {
-                sp.color = Color.Lerp(deathColor, sp.color, changeColor_SPD);
-            }
             Destroy(gameObject,1f);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (sp.color != deathColor)
+        {
+            sp.color = Color.Lerp(deathColor, sp.color, changeColor_SPD);
+        }
+        if (sp.color != notCurrent_COL)
+        {
+            sp.color = Color.Lerp(notCurrent_COL, sp.color, changeColor_SPD);
+        }
+        if (sp.color != currentTree_COL)
+        {
+            sp.color = Color.Lerp(currentTree_COL, sp.color, changeColor_SPD);
         }
     }
 
