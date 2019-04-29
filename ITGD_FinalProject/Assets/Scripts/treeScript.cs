@@ -49,12 +49,14 @@ public class treeScript : MonoBehaviour
 
         if (treeHP <= 0)
         {
-            if (!didAdd)
-            {
-                mC.treesCut += 1;
-                didAdd = true;
-            }
-            Destroy(gameObject,1f);
+            //if (!didAdd)
+            //{
+            //    mC.treesCut += 1;
+            //    didAdd = true;
+            //}
+            //Destroy(gameObject,1f);
+            mC.treesCut += 1;
+            Destroy(gameObject);
         }
     }
 
