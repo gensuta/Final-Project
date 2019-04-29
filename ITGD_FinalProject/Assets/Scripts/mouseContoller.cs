@@ -54,63 +54,47 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
             {
                 Vector3 currentTreePos = tM.treeObjects[treesCut].transform.position; // where's our current tree?
 
-                if (maxLeftPos == Vector3.zero)
-                {
-                    if (mousePos2D.x < currentTreePos.x) //if you're to the LEFT of the tree
-                    {
-                        leftPos = transform.position; // lets get that left position!
-                    }
 
-                    //if we're starting to move to the right because our x is growing!
-                    if (transform.position.x > leftPos.x)
-                    {
-                        maxLeftPos = transform.position;
-                        //Debug.Log(Vector3.Distance(maxLeftPos, currentTreePos));
-                    }
-                }
-                if (maxRightPos == Vector3.zero)
+                if (mousePos2D.x < currentTreePos.x) //if you're to the LEFT of the tree
                 {
-                    if (mousePos2D.x > currentTreePos.x) //if you're to the RIGHT of the tree
-                    {
-                        rightPos = transform.position; // lets get that right position!
-                    }
-
-                    //if we're starting to move to the left because our x is shrinking!
-                    if (transform.position.x < rightPos.x)
-                    {
-                        maxRightPos = transform.position;
-                        //Debug.Log(Vector3.Distance(maxRightPos, currentTreePos));
-                    }
+                    leftPos = transform.position; // lets get that left position!
                 }
 
-                if (maxLeftPos != Vector3.zero && Vector3.Distance(maxLeftPos, currentTreePos) >= maxDist2Tree)
+
+
+                if (mousePos2D.x > currentTreePos.x) //if you're to the RIGHT of the tree
+                {
+                    rightPos = transform.position; // lets get that right position!
+                }
+
+                if (Vector3.Distance(leftPos, currentTreePos) >= maxDist2Tree)
                 {
                     canCut = true;
                 }
-                else if (maxRightPos != Vector3.zero && Vector3.Distance(maxRightPos, currentTreePos) >= maxDist2Tree)
+                else if (Vector3.Distance(rightPos, currentTreePos) >= maxDist2Tree)
                 {
                     canCut = true;
                 }
-                else if (maxLeftPos != Vector3.zero && leftPos != Vector3.zero || maxRightPos != Vector3.zero && rightPos != Vector3.zero)
-                {
 
-                    Debug.Log("no cut for u!");
-                    ClearDistanceInfo();
-
-                }
             }
 
             //here ends the distance
 
 
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //storing what we may have hit via raycasting!
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Camera.main.transform.forward); //storing what we may have hit via raycasting!
 
             if (hit.collider != null)
             {
+                Debug.Log("i hit smthg");
                 if (hit.collider.gameObject == tM.treeObjects[treesCut] && canCut) 
                 {
-                    Debug.Log("heyhey");
+                    Debug.Log("i hit a tree!");
                     tM.treeScripts[treesCut].treeHP -= 1;
+                    ClearDistanceInfo();
+                }
+                else if (hit.collider.gameObject == tM.treeObjects[treesCut] && !canCut)
+                {
+                    Debug.Log("no wood for u >:)");
                     ClearDistanceInfo();
                 }
             }

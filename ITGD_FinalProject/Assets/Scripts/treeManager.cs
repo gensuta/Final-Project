@@ -36,7 +36,7 @@ public class treeManager : MonoBehaviour
 
             if (i == 0)
             {
-                 thisTree= Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity) as GameObject;
+                 thisTree= Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity,transform) as GameObject;
                  randomNum = 0;
 
             }
@@ -46,11 +46,11 @@ public class treeManager : MonoBehaviour
 
                 if (randomNum == 0) // 0 means weak
                 {
-                    thisTree = Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity) as GameObject;
+                    thisTree = Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
                 }
                 else // other nums are strong!
                 {
-                  thisTree = Instantiate(strong_treePrefab, Vector3.zero, Quaternion.identity) as GameObject;
+                  thisTree = Instantiate(strong_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
                 }
             }
 

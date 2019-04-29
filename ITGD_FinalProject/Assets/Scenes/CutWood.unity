@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeObjects: []
   treeScripts: []
-  totalTrees: 5
+  totalTrees: 20
   weak_treePrefab: {fileID: 470791460451930078, guid: 6e053458cffd04c56bb96b41389c51be,
     type: 3}
   strong_treePrefab: {fileID: 4957397162369392241, guid: bcc0041289ace40c986f3c967932d73c,
@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348435201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0869269, y: 0.04601908, z: -0.018753944}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -355,11 +355,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   treesCut: 0
-  currentTree_OBJ: {fileID: 0}
-  currentTree_SCR: {fileID: 0}
   dist2Tree: 0
+  maxDist2Tree: 7
   leftPos: {x: 0, y: 0, z: 0}
   rightPos: {x: 0, y: 0, z: 0}
+  maxLeftPos: {x: 0, y: 0, z: 0}
+  maxRightPos: {x: 0, y: 0, z: 0}
+  canCut: 0
 --- !u!4 &1797830227
 Transform:
   m_ObjectHideFlags: 0
