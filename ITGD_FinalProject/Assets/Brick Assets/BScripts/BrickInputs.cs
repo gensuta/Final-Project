@@ -7,6 +7,8 @@ public class BrickInputs : MonoBehaviour
     public int phase = 1;
     public bool isTop = true;
     public bool brickDone = true;
+    public GameObject Brick;
+    Vector2 newPos;
 
     public int topRow;
     public int botRow;
@@ -14,8 +16,7 @@ public class BrickInputs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        topRow = Random.Range(0, 3);
-        botRow = Random.Range(0, 3);
+        CutWood();
     }
 
     // Update is called once per frame
@@ -92,11 +93,80 @@ public class BrickInputs : MonoBehaviour
             phase = 5;
         }
 
+        if (topRow == 0 && !isTop)
+        {
+            if (phase == 5 && !isTop && Input.GetKeyDown(KeyCode.Q))
+            {
+                phase = 6;
+            }
+            if (phase == 6 && !isTop && Input.GetKeyDown(KeyCode.W))
+            {
+                phase = 7;
+            }
+            if (phase == 7 && !isTop && Input.GetKeyDown(KeyCode.E))
+            {
+                phase = 8;
+            }
+        }
+        if (botRow == 1 && !isTop)
+        {
+            if (phase == 5 && !isTop && Input.GetKeyDown(KeyCode.I))
+            {
+                phase = 6;
+            }
+            if (phase == 6 && !isTop && Input.GetKeyDown(KeyCode.O))
+            {
+                phase = 7;
+            }
+            if (phase == 7 && !isTop && Input.GetKeyDown(KeyCode.P))
+            {
+                phase = 8;
+            }
+        }
+        if (botRow == 2 && !isTop)
+        {
+            if (phase == 5 && !isTop && Input.GetKeyDown(KeyCode.Z))
+            {
+                phase = 6;
+            }
+            if (phase == 6 && !isTop && Input.GetKeyDown(KeyCode.X))
+            {
+                phase = 7;
+            }
+            if (phase == 7 && !isTop && Input.GetKeyDown(KeyCode.C))
+            {
+                phase = 8;
+            }
+        }
+        if (botRow == 3 && !isTop)
+        {
+            if (phase == 5 && !isTop && Input.GetKeyDown(KeyCode.B))
+            {
+                phase = 6;
+            }
+            if (phase == 6 && !isTop && Input.GetKeyDown(KeyCode.N))
+            {
+                phase = 7;
+            }
+            if (phase == 7 && !isTop && Input.GetKeyDown(KeyCode.M))
+            {
+                phase = 8;
+            }
+        }
+
+        if (phase == 8)
+        {
+            CutWood();
+
+        }
+
     }
 
     void CutWood()
     {
+        newPos = new Vector2(0f, -1.5f);
         topRow = Random.Range(0, 3);
         botRow = Random.Range(0, 3);
+        Instantiate(Brick,newPos);
     }
 }

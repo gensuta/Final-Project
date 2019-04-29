@@ -20,6 +20,11 @@ public class InputPlace : MonoBehaviour
     {
         if (bri.phase == 4)
         {
+            text.text = "DOWN";
+        }
+
+        if (bri.phase == 8)
+        {
             text.text = "SPACE";
         }
 
@@ -78,60 +83,57 @@ public class InputPlace : MonoBehaviour
             text.text = "M";
         }
 
-
-
-
-        if (bri.botRow == 0 && bri.isTop == true && bri.phase == 5)
+        if (bri.botRow == 0 && !bri.isTop && bri.phase == 5)
         {
             text.text = "Q W E";
         }
-        if (bri.botRow == 0 && bri.isTop == true && bri.phase == 6)
+        if (bri.botRow == 0 && !bri.isTop && bri.phase == 6)
         {
             text.text = "W E";
         }
-        if (bri.botRow == 0 && bri.isTop == true && bri.phase == 7)
+        if (bri.botRow == 0 && !bri.isTop && bri.phase == 7)
         {
             text.text = "E";
         }
 
 
-        if (bri.botRow == 1 && bri.isTop == true && bri.phase == 5)
+        if (bri.botRow == 1 && !bri.isTop && bri.phase == 5)
         {
             text.text = "I O P";
         }
-        if (bri.botRow == 1 && bri.isTop == true && bri.phase == 6)
+        if (bri.botRow == 1 && !bri.isTop && bri.phase == 6)
         {
             text.text = "O P";
         }
-        if (bri.botRow == 1 && bri.isTop == true && bri.phase == 7)
+        if (bri.botRow == 1 && !bri.isTop && bri.phase == 7)
         {
             text.text = "P";
         }
 
 
-        if (bri.botRow == 2 && bri.isTop == true && bri.phase == 5)
+        if (bri.botRow == 2 && !bri.isTop && bri.phase == 5)
         {
             text.text = "Z X C";
         }
-        if (bri.botRow == 2 && bri.isTop == true && bri.phase == 6)
+        if (bri.botRow == 2 && !bri.isTop && bri.phase == 6)
         {
             text.text = "X C";
         }
-        if (bri.botRow == 2 && bri.isTop == true && bri.phase == 7)
+        if (bri.botRow == 2 && !bri.isTop && bri.phase == 7)
         {
             text.text = "C";
         }
 
 
-        if (bri.botRow == 3 && bri.isTop == true && bri.phase == 5)
+        if (bri.botRow == 3 && !bri.isTop && bri.phase == 5)
         {
             text.text = "B N M";
         }
-        if (bri.botRow == 3 && bri.isTop == true && bri.phase == 6)
+        if (bri.botRow == 3 && !bri.isTop && bri.phase == 6)
         {
             text.text = "N M";
         }
-        if (bri.botRow == 3 && bri.isTop == true && bri.phase == 7)
+        if (bri.botRow == 3 && !bri.isTop && bri.phase == 7)
         {
             text.text = "M";
         }
