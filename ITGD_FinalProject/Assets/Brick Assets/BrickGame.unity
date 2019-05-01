@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 1594573344}
   m_Layer: 5
   m_Name: Score
-  m_TagString: score
+  m_TagString: brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  round: 0
 --- !u!114 &1594573345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  round: 3
 --- !u!1 &1968369785
 GameObject:
   m_ObjectHideFlags: 0
