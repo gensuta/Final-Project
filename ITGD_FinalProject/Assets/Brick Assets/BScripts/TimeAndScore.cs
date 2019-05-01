@@ -50,7 +50,7 @@ public class TimeAndScore : MonoBehaviour
 
         if (text.tag == "apple")
         {
-            text.text = "Score: " + GameObject.Find("hands").GetComponent<handController>().numCaught;
+            text.text = "Score: " + GameObject.Find("player").GetComponent<handController>().numCaught;
         }
 
         if (text.tag == "tree")
