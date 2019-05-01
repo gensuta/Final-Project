@@ -159,6 +159,7 @@ public class BrickInputs : MonoBehaviour
         if (phase == 8 && Input.GetKeyDown(KeyCode.Space))
         {
             brickCount++;
+            gameController.instance.bricksDown = brickCount;
             CutWood();
             
         }

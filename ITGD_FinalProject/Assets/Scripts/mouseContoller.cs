@@ -33,7 +33,7 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
     // Update is called once per frame
     void Update()
     {
-        HomeScript.treesCaught = treesCut;
+       gameController.instance.woodCut = treesCut;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //getting where your mouse is in the actual game
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); // turning that vector 3 into a vector 2 for raycasting sake

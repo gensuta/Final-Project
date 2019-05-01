@@ -45,17 +45,17 @@ public class TimeAndScore : MonoBehaviour
         // Press the space key to change the Text message.
         if (text.tag == "brick")
         {
-            text.text = "Score: " + GameObject.Find("BrickManager").GetComponent<BrickInputs>().brickCount;
+            text.text = "Score: " + gameController.instance.bricksDown;
         }
 
         if (text.tag == "apple")
         {
-            text.text = "Score: " + GameObject.Find("hands").GetComponent<handController>().numCaught;
+            text.text = "Score: " + gameController.instance.applesCaught;
         }
 
         if (text.tag == "tree")
         {
-            text.text = "Score: " + HomeScript.treesCaught;
+            text.text = "Score: " + gameController.instance.woodCut;
         }
 
         if (text.tag == "timer")

@@ -28,6 +28,7 @@ public class handController : MonoBehaviour
     {
         combo += 1;
         numCaught += 1;
+        gameController.instance.applesCaught = numCaught;
         Destroy(collision.gameObject); // bye bye apple!
     }
 }
