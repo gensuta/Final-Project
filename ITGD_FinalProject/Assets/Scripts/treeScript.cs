@@ -35,30 +35,38 @@ public class treeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isCurrentTree) // you're the current tree!
+        if (mC.timer <= 0f)
         {
-            anim.SetInteger("whichAnim", 0); // 0 means go to currentTree color
-            bc.enabled = true;
+            anim.SetInteger("whichAnim", -1); // -1 means fade out and die
+            Destroy(gameObject, 0.5f);
         }
-
-        else // you're NOT the current tree!
+        else
         {
-            anim.SetInteger("whichAnim", 1); // 1 means go to NOTcurrentTree color
-            bc.enabled = false;
-        }
-
-        if (treeHP <= 0) // you're dead
-        {
-            if (!didAdd)
+            if (isCurrentTree) // you're the current tree!
             {
-                mC.treesCut += 1;
-                Debug.Log("u got wood!");
-                anim.SetInteger("whichAnim", -1); // -1 means fade out and die
-                didAdd = true;
-                bc.enabled = false;
-                Destroy(gameObject,0.5f);
+                anim.SetInteger("whichAnim", 0); // 0 means go to currentTree color
+                bc.enabled = true;
             }
 
+            else // you're NOT the current tree!
+            {
+                anim.SetInteger("whichAnim", 1); // 1 means go to NOTcurrentTree color
+                bc.enabled = false;
+            }
+
+            if (treeHP <= 0) // you're dead
+            {
+                if (!didAdd)
+                {
+                    mC.treesCut += 1;
+                    Debug.Log("u got wood!");
+                    anim.SetInteger("whichAnim", -1); // -1 means fade out and die
+                    didAdd = true;
+                    bc.enabled = false;
+                    Destroy(gameObject, 0.5f);
+                }
+
+            }
         }
     }
 

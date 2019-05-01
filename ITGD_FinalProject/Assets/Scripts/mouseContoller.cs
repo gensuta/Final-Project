@@ -23,6 +23,8 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
     public bool canCut;
 
+    public Animator playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,20 +34,20 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //getting where your mouse is in the actual game
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); // turning that vector 3 into a vector 2 for raycasting sake
 
         transform.position = mousePos2D; // its 2d instead of vector3 to keep the trailRenderer in front of the camera
 
-        if (tM.treeScripts.Count > treesCut)
+        if (tM.treeScripts.Count > treesCut && timer > 0f)
         {
 
             if (tM.treeScripts[treesCut] != null)
             {
                 tM.treeScripts[treesCut].isCurrentTree = true;
             }
-
 
             //here begins the distance
 
@@ -69,11 +71,18 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
                 if (Vector3.Distance(leftPos, currentTreePos) >= maxDist2Tree)
                 {
+                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
                     canCut = true;
                 }
                 else if (Vector3.Distance(rightPos, currentTreePos) >= maxDist2Tree)
                 {
+                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
                     canCut = true;
+                }
+
+                if (Vector2.Distance(mousePos2D,currentTreePos) <= 2f) // if we're getting close to the tree!
+                {
+                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
                 }
 
             }
@@ -87,16 +96,20 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
             {
                 if (hit.collider.gameObject == tM.treeObjects[treesCut] && canCut) 
                 {
-                    Debug.Log("i hit a tree!");
+                    playerAnim.SetInteger("whichAnim", 2); // set the animation to tree hit!
                     tM.treeScripts[treesCut].treeHP -= 1;
                     ClearDistanceInfo();
                 }
                 else if (hit.collider.gameObject == tM.treeObjects[treesCut] && !canCut)
                 {
-                    Debug.Log("no wood for u >:)");
+                    playerAnim.SetInteger("whichAnim", -1); // set the animation to you didnt hit the tree!
                     ClearDistanceInfo();
                 }
             }
+        }
+        else
+        {
+            Debug.Log("time ran out!!");
         }
     }
 
