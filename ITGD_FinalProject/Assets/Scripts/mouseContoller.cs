@@ -25,6 +25,9 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
     public Animator playerAnim;
 
+    public Text scoreTxt;
+    public Text timeTxt; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +37,6 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //getting where your mouse is in the actual game
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); // turning that vector 3 into a vector 2 for raycasting sake
@@ -43,7 +45,6 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
         if (tM.treeScripts.Count > treesCut && timer > 0f)
         {
-
             if (tM.treeScripts[treesCut] != null)
             {
                 tM.treeScripts[treesCut].isCurrentTree = true;
@@ -102,6 +103,7 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
                 }
                 else if (hit.collider.gameObject == tM.treeObjects[treesCut] && !canCut)
                 {
+                    tM.treeScripts[treesCut].anim.SetInteger("whichAnim", 2); // the tree flashes red cuz u cant hit it!!
                     playerAnim.SetInteger("whichAnim", -1); // set the animation to you didnt hit the tree!
                     ClearDistanceInfo();
                 }
