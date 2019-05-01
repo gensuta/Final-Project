@@ -6,7 +6,6 @@ using TMPro;
 
 public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 {
-    public float timer;
 
     public int treesCut; // the number of trees cut down
 
@@ -34,14 +33,14 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
+        HomeScript.treesCaught = treesCut;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //getting where your mouse is in the actual game
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); // turning that vector 3 into a vector 2 for raycasting sake
 
         transform.position = mousePos2D; // its 2d instead of vector3 to keep the trailRenderer in front of the camera
 
-        if (tM.treeScripts.Count > treesCut && timer > 0f)
+        if (tM.treeScripts.Count > treesCut && TimeAndScore.timeLeft > 0f)
         {
 
             if (tM.treeScripts[treesCut] != null)

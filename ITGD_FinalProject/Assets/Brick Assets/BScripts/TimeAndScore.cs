@@ -53,6 +53,11 @@ public class TimeAndScore : MonoBehaviour
             text.text = "Score: " + GameObject.Find("hands").GetComponent<handController>().numCaught;
         }
 
+        if (text.tag == "tree")
+        {
+            text.text = "Score: " + HomeScript.treesCaught;
+        }
+
         if (text.tag == "timer")
         {
             text.text = timeLeft.ToString("#.0");
