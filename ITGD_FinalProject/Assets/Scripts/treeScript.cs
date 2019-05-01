@@ -26,9 +26,12 @@ public class treeScript : MonoBehaviour
 
     public bool didAdd; // adds to treesCut only ONCE
 
+    public float lerpVar;
+
     // Start is called before the first frame update
     void Awake()
     {
+        lerpVar = 0f;
         mC = FindObjectOfType<mouseContoller>();
         bc = GetComponent<BoxCollider2D>();
         sp = GetComponent<SpriteRenderer>();
@@ -39,11 +42,29 @@ public class treeScript : MonoBehaviour
     {
         if (isCurrentTree)
         {
+            if (sp.color != currentTree_COL)
+            {
+                lerpVar += changeColor_SPD * Time.deltaTime;
+                sp.color = Color.Lerp(currentTree_COL, sp.color, lerpVar);
+            }
+            else
+            {
+                lerpVar = 0f;
+            }
             bc.enabled = true;
         }
 
         else
         {
+            if (sp.color != notCurrent_COL)
+            {
+                lerpVar += changeColor_SPD * Time.deltaTime;
+                sp.color = Color.Lerp(notCurrent_COL, sp.color, lerpVar);
+            }
+            else
+            {
+                lerpVar = 0f;
+            }
             bc.enabled = false;
         }
 
@@ -55,23 +76,17 @@ public class treeScript : MonoBehaviour
                 Debug.Log("u got wood!");
                 didAdd = true;
             }
-            Destroy(gameObject,1f);
-        }
-    }
+            if (sp.color != deathColor)
+            {
+                lerpVar += changeColor_SPD * Time.deltaTime;
+                sp.color = Color.Lerp(deathColor, sp.color, lerpVar);
+            }
+            else
+            {
+                lerpVar = 0f;
+            }
 
-    private void FixedUpdate()
-    {
-        if (sp.color != deathColor && didAdd)
-        {
-            sp.color = Color.Lerp(deathColor, sp.color, changeColor_SPD);
-        }
-        if (sp.color != notCurrent_COL && !isCurrentTree)
-        {
-            sp.color = Color.Lerp(notCurrent_COL, sp.color, changeColor_SPD);
-        }
-        if (sp.color != currentTree_COL && isCurrentTree)
-        {
-            sp.color = Color.Lerp(currentTree_COL, sp.color, changeColor_SPD);
+            Destroy(gameObject,1f);
         }
     }
 

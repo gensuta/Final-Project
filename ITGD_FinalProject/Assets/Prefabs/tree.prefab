@@ -126,5 +126,6 @@ MonoBehaviour:
   currentTree_COL: {r: 1, g: 1, b: 1, a: 1}
   notCurrent_COL: {r: 0.18158396, g: 0.15218937, b: 0.18867922, a: 1}
   deathColor: {r: 0, g: 0, b: 0, a: 0}
-  changeColor_SPD: 0.1
+  changeColor_SPD: 0.4
   didAdd: 0
+  lerpVar: 0
