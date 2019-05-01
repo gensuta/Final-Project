@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5939747880075941904}
   - component: {fileID: 5586560154621677692}
   - component: {fileID: 619624739702449785}
+  - component: {fileID: 4578214695654844888}
   m_Layer: 0
   m_Name: strongTree
   m_TagString: Untagged
@@ -97,12 +98,8 @@ MonoBehaviour:
   treeNum: 0
   isCurrentTree: 0
   treeHP: 0
-  currentTree_COL: {r: 1, g: 1, b: 1, a: 1}
-  notCurrent_COL: {r: 0.18158396, g: 0.15218937, b: 0.18867922, a: 1}
-  deathColor: {r: 0, g: 0, b: 0, a: 0}
-  changeColor_SPD: 0.1
+  anim: {fileID: 0}
   didAdd: 0
-  lerpVar: 0
 --- !u!61 &619624739702449785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,3 +126,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1994493, y: 5.8261433}
   m_EdgeRadius: 0
+--- !u!95 &4578214695654844888
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4957397162369392241}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a84be20b7866f4f59a0a5bc828e6b757, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

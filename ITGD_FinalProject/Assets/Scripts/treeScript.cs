@@ -15,23 +15,18 @@ public class treeScript : MonoBehaviour
 
     public int treeHP; // how many times must I be slashed by the mouse? 
 
+    public Animator anim;
 
-    public Color currentTree_COL; // if you're the current tree yr clear!
-    public Color notCurrent_COL; // if you're not the current tree you're slightly desaturated
-    public Color deathColor; // if the tree is gone
-
-    public float changeColor_SPD; // the speed at which the trees color changes
 
     mouseContoller mC;
 
     public bool didAdd; // adds to treesCut only ONCE
 
-    public float lerpVar;
 
     // Start is called before the first frame update
     void Awake()
     {
-        lerpVar = 0f;
+        anim = GetComponent<Animator>();
         mC = FindObjectOfType<mouseContoller>();
         bc = GetComponent<BoxCollider2D>();
         sp = GetComponent<SpriteRenderer>();
@@ -40,53 +35,30 @@ public class treeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isCurrentTree)
+        if (isCurrentTree) // you're the current tree!
         {
-            if (sp.color != currentTree_COL)
-            {
-                lerpVar += changeColor_SPD * Time.deltaTime;
-                sp.color = Color.Lerp(currentTree_COL, sp.color, lerpVar);
-            }
-            else
-            {
-                lerpVar = 0f;
-            }
+            anim.SetInteger("whichAnim", 0); // 0 means go to currentTree color
             bc.enabled = true;
         }
 
-        else
+        else // you're NOT the current tree!
         {
-            if (sp.color != notCurrent_COL)
-            {
-                lerpVar += changeColor_SPD * Time.deltaTime;
-                sp.color = Color.Lerp(notCurrent_COL, sp.color, lerpVar);
-            }
-            else
-            {
-                lerpVar = 0f;
-            }
+            anim.SetInteger("whichAnim", 1); // 1 means go to NOTcurrentTree color
             bc.enabled = false;
         }
 
-        if (treeHP <= 0)
+        if (treeHP <= 0) // you're dead
         {
             if (!didAdd)
             {
                 mC.treesCut += 1;
                 Debug.Log("u got wood!");
+                anim.SetInteger("whichAnim", -1); // -1 means fade out and die
                 didAdd = true;
-            }
-            if (sp.color != deathColor)
-            {
-                lerpVar += changeColor_SPD * Time.deltaTime;
-                sp.color = Color.Lerp(deathColor, sp.color, lerpVar);
-            }
-            else
-            {
-                lerpVar = 0f;
+                bc.enabled = false;
+                Destroy(gameObject,0.5f);
             }
 
-            Destroy(gameObject,1f);
         }
     }
 

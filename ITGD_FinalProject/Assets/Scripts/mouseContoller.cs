@@ -85,7 +85,6 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
             if (hit.collider != null)
             {
-                Debug.Log("i hit smthg");
                 if (hit.collider.gameObject == tM.treeObjects[treesCut] && canCut) 
                 {
                     Debug.Log("i hit a tree!");
