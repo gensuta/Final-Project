@@ -36,8 +36,8 @@ public class treeManager : MonoBehaviour
 
             if (i == 0)
             {
-                 thisTree= Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity,transform) as GameObject;
-                 randomNum = 0;
+                thisTree = Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
+                randomNum = 0;
 
             }
             else
@@ -50,7 +50,7 @@ public class treeManager : MonoBehaviour
                 }
                 else // other nums are strong!
                 {
-                  thisTree = Instantiate(strong_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
+                    thisTree = Instantiate(strong_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
                 }
             }
 
