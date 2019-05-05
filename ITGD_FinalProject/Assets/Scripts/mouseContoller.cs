@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 {
@@ -108,6 +109,7 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
         }
         else
         {
+           // SceneManager.LoadScene("StatsScreen");
             Debug.Log("time ran out!!");
         }
     }

@@ -59,11 +59,13 @@ public class treeScript : MonoBehaviour
                 if (!didAdd)
                 {
                     mC.treesCut += 1;
+                    gameController.instance.woodCut = mC.treesCut;
+
                     Debug.Log("u got wood!");
                     anim.SetInteger("whichAnim", -1); // -1 means fade out and die
                     didAdd = true;
                     bc.enabled = false;
-                    Destroy(gameObject, 0.5f);
+                    Destroy(gameObject, 1.5f);
                 }
 
             }

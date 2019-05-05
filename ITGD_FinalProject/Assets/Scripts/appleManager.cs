@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class appleManager : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class appleManager : MonoBehaviour
                 Debug.Log(resetNum);
                 waitTime = resetNum;
             }
+        }
+        else
+        {
+            SceneManager.LoadScene("StatsScreen");
         }
     }
 }
