@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class appleManager : MonoBehaviour
 {
@@ -48,7 +47,7 @@ public class appleManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("StatsScreen");
+            gameController.instance.GoToStats();
         }
     }
 }

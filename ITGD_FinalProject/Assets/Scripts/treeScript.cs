@@ -35,7 +35,7 @@ public class treeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TimeAndScore.timeLeft <= 0f)
+        if (gameController.instance.timeLeft <= 0f)
         {
             anim.SetInteger("whichAnim", -1); // -1 means fade out and die
             Destroy(gameObject, 0.5f);

@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 16a2a9d49f6d348559fd5d49daaa1e37
+  - enabled: 1
+    path: Assets/Scenes/CutWood.unity
+    guid: f2f41f3795c884b109e29d18394b34ca
+  - enabled: 1
+    path: Assets/Brick Assets/BrickGame.unity
+    guid: 3ad0a2c01e1e3af4e95a93c7fd476a16
+  - enabled: 1
+    path: Assets/Scenes/CatchFruit.unity
+    guid: 9c5ed7ea2ace04be1af9fcfa012ac268
+  - enabled: 1
+    path: Assets/Scenes/StatsScreen.unity
+    guid: f247800cde8044485a15fd788480fa53
+  - enabled: 1
+    path: Assets/Scenes/HomeScene.unity
+    guid: 2ec9557265a1d401b9f7476a2e0097ff
   m_configObjects: {}

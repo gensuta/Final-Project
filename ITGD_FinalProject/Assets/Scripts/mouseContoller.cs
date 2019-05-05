@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 {
@@ -41,7 +40,7 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
         transform.position = mousePos2D; // its 2d instead of vector3 to keep the trailRenderer in front of the camera
 
-        if (tM.treeScripts.Count > treesCut && TimeAndScore.timeLeft > 0f)
+        if (tM.treeScripts.Count > treesCut && gameController.instance.timeLeft > 0f)
         {
 
             if (tM.treeScripts[treesCut] != null)
@@ -109,7 +108,7 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
         }
         else
         {
-           // SceneManager.LoadScene("StatsScreen");
+            gameController.instance.GoToStats();
             Debug.Log("time ran out!!");
         }
     }

@@ -359,6 +359,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 1540837639851335684, guid: f2154cc19f3374ee0a1f1d3870d5895f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1540837639851335685, guid: f2154cc19f3374ee0a1f1d3870d5895f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -697,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  round: 1
+  round: 0
 --- !u!1 &1968369785
 GameObject:
   m_ObjectHideFlags: 0

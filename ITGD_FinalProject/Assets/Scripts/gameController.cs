@@ -6,10 +6,14 @@ using UnityEngine.UI;
 
 public class gameController : MonoBehaviour
 {
-    public static gameController instance;
+    public static gameController instance; // now you can reference this script everywhere!
     public int woodCut;
     public int bricksDown;
     public int applesCaught;
+
+    public int storedWood; // to be counted by the end
+    public int storedApples; // to be counted by the end
+    public int storedBricks; // to be counted by the end
     
     public int currentScene; // 0 start, 1 wood, 2 brick, 3 apples, 4 stats, 5 homeScene (final scene)
     public bool didKeep;
@@ -18,6 +22,8 @@ public class gameController : MonoBehaviour
     public int numGames; // how many games have you played so far? If you play 3 games the rounds go up by 1
 
     public int lastGame; // last game matches scene numbers. Detects what to show in stats
+
+    public float timeLeft = 30;
 
     void Start()
     {
@@ -39,6 +45,14 @@ public class gameController : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
             didKeep = true;
+        }
+
+        if (GetSceneName() == "TitleScreen")
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                ForwardAScene();
+            }
         }
 
         //oooooh cheat cooooodes!
@@ -68,18 +82,29 @@ public class gameController : MonoBehaviour
             if (randomNum == lastGame)
             {
                 randomNum = 2;
+                currentScene = randomNum;
+                return randomNum;
+                
             }
             else
             {
+                currentScene = randomNum;
                 return randomNum;
             }
         }
         else
         {
+            currentScene = randomNum;
             return randomNum;
         }
 
-        return 1;
+    }
+
+    public void GoToStats()
+    {
+        lastGame = currentScene;
+        SceneManager.LoadScene("StatsScreen");
+        timeLeft = 30f;
     }
 
 

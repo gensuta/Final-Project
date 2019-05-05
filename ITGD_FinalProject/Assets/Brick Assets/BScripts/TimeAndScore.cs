@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class TimeAndScore : MonoBehaviour
 {
     Text text;
-    static public float timeLeft = 30;
     public int round;
-
+    //the static timeLeft was moved to the gameController since gameController is in every scene
+    // meaning it can also be reset during the stats screen
 
     void Start()
     {
+        round = gameController.instance.rounds;
         text = gameObject.GetComponent<Text>();
         text.text = "0";
 
@@ -19,26 +20,27 @@ public class TimeAndScore : MonoBehaviour
 
     void Update()
     {
-        if (round == 1)
+        if (round == 0) // first round
         {
             Time.timeScale = 1f;
         }
 
-        if (round == 2)
+        if (round == 1) // second
         {
             Time.timeScale = 2f;
 
         }
 
-        if (round == 3)
+        if (round == 2) // third
         {
             Time.timeScale = 3f;
         }
 
 
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0 && text.tag == "timer")
+        gameController.instance.timeLeft -= Time.deltaTime;
+        if (gameController.instance.timeLeft < 0 && text.tag == "timer")
         {
+            gameController.instance.GoToStats();
             text.text = "game over";
         }
 
@@ -60,7 +62,7 @@ public class TimeAndScore : MonoBehaviour
 
         if (text.tag == "timer")
         {
-            text.text = timeLeft.ToString("#.0");
+            text.text = gameController.instance.timeLeft.ToString("#.0");
         }
     }
 }
