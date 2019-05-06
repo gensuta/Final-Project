@@ -56,7 +56,7 @@ public class gameController : MonoBehaviour
         }
 
         //oooooh cheat cooooodes!
-        if (Input.GetKey(KeyCode.LeftCommand))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
