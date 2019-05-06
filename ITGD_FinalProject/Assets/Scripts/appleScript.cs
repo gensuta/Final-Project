@@ -18,7 +18,6 @@ public class appleScript : MonoBehaviour
         if (transform.position.y < -6)
         {
             hc.combo = 0;
-            Debug.Log("you missed!");
             Destroy(gameObject, 0.2f);
         }
     }

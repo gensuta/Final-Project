@@ -41,7 +41,6 @@ public class appleManager : MonoBehaviour
                     resetNum = 1f;
                 }
 
-                Debug.Log(resetNum);
                 waitTime = resetNum;
             }
         }
