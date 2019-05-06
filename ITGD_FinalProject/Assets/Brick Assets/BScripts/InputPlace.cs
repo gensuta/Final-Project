@@ -18,124 +18,101 @@ public class InputPlace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bri.phase == 4)
+        if (bri.phase == 3)
         {
-            text.text = "DOWN";
+            if (bri.submitB == 0)
+            {
+                text.text = "Left Click";
+            }
+
+            if (bri.submitB == 1)
+            {
+                text.text = "Right Click";
+            }
         }
 
-        if (bri.phase == 8)
-        {
-            text.text = "SPACE";
-        }
 
         if (bri.topRow == 0 && bri.isTop == true && bri.phase == 1)
         {
-            text.text = "Q W E";
+            text.text = "0";
         }
-        if (bri.topRow == 0 && bri.isTop == true && bri.phase == 2)
-        {
-            text.text = "W E";
-        }
-        if (bri.topRow == 0 && bri.isTop == true && bri.phase == 3)
-        {
-            text.text = "E";
-        }
-
-
         if (bri.topRow == 1 && bri.isTop == true && bri.phase == 1)
         {
-            text.text = "I O P";
+            text.text = "1";
         }
-        if (bri.topRow == 1 && bri.isTop == true && bri.phase == 2)
+        if (bri.topRow == 2 && bri.isTop == true && bri.phase == 1)
         {
-            text.text = "O P";
+            text.text = "2";
         }
-        if (bri.topRow == 1 && bri.isTop == true && bri.phase == 3)
+        if (bri.topRow == 3 && bri.isTop == true && bri.phase == 1)
+        {
+            text.text = "3";
+        }
+        if (bri.topRow == 4 && bri.isTop == true && bri.phase == 1)
+        {
+            text.text = "4";
+        }
+        if (bri.topRow == 5 && bri.isTop == true && bri.phase == 1)
+        {
+            text.text = "5";
+        }
+        if (bri.topRow == 6 && bri.isTop == true && bri.phase == 1)
+        {
+            text.text = "6";
+        }
+        if (bri.topRow == 7 && bri.isTop == true && bri.phase == 1)
+        {
+            text.text = "7";
+        }
+        if (bri.topRow == 8 && bri.isTop == true && bri.phase == 1)
+        {
+            text.text = "8";
+        }
+        if (bri.topRow == 9 && bri.isTop == true && bri.phase == 1)
+        {
+            text.text = "9";
+        }
+
+
+        if (bri.botRow == 0 && !bri.isTop && bri.phase == 2)
         {
             text.text = "P";
         }
-
-
-        if (bri.topRow == 2 && bri.isTop == true && bri.phase == 1)
+        if (bri.botRow == 1 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "Z X C";
+            text.text = "Q";
         }
-        if (bri.topRow == 2 && bri.isTop == true && bri.phase == 2)
+        if (bri.botRow == 2 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "X C";
+            text.text = "W";
         }
-        if (bri.topRow == 2 && bri.isTop == true && bri.phase == 3)
-        {
-            text.text = "C";
-        }
-
-
-        if (bri.topRow == 3 && bri.isTop == true && bri.phase == 1)
-        {
-            text.text = "B N M";
-        }
-        if (bri.topRow == 3 && bri.isTop == true && bri.phase == 2)
-        {
-            text.text = "N M";
-        }
-        if (bri.topRow == 3 && bri.isTop == true && bri.phase == 3)
-        {
-            text.text = "M";
-        }
-
-        if (bri.botRow == 0 && !bri.isTop && bri.phase == 5)
-        {
-            text.text = "Q W E";
-        }
-        if (bri.botRow == 0 && !bri.isTop && bri.phase == 6)
-        {
-            text.text = "W E";
-        }
-        if (bri.botRow == 0 && !bri.isTop && bri.phase == 7)
+        if (bri.botRow == 3 && !bri.isTop && bri.phase == 2)
         {
             text.text = "E";
         }
-
-
-        if (bri.botRow == 1 && !bri.isTop && bri.phase == 5)
+        if (bri.botRow == 4 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "I O P";
+            text.text = "R";
         }
-        if (bri.botRow == 1 && !bri.isTop && bri.phase == 6)
+        if (bri.botRow == 5 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "O P";
+            text.text = "T";
         }
-        if (bri.botRow == 1 && !bri.isTop && bri.phase == 7)
+        if (bri.botRow == 6 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "P";
+            text.text = "Y";
         }
-
-
-        if (bri.botRow == 2 && !bri.isTop && bri.phase == 5)
+        if (bri.botRow == 7 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "Z X C";
+            text.text = "U";
         }
-        if (bri.botRow == 2 && !bri.isTop && bri.phase == 6)
+        if (bri.botRow == 8 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "X C";
+            text.text = "I";
         }
-        if (bri.botRow == 2 && !bri.isTop && bri.phase == 7)
+        if (bri.botRow == 9 && !bri.isTop && bri.phase == 2)
         {
-            text.text = "C";
-        }
-
-
-        if (bri.botRow == 3 && !bri.isTop && bri.phase == 5)
-        {
-            text.text = "B N M";
-        }
-        if (bri.botRow == 3 && !bri.isTop && bri.phase == 6)
-        {
-            text.text = "N M";
-        }
-        if (bri.botRow == 3 && !bri.isTop && bri.phase == 7)
-        {
-            text.text = "M";
+            text.text = "O";
         }
     }
 }

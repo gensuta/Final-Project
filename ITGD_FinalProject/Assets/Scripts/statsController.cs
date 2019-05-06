@@ -57,14 +57,14 @@ public class statsController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (gameController.instance.rounds == 0)
-            {
+            //if (gameController.instance.rounds == 0)
+            //{
                 gameController.instance.ForwardAScene();
-            }
-            else
-            {
-                SceneManager.LoadScene(gameController.instance.RandomScene());
-            }
+            //}
+            //else
+            //{
+            //    SceneManager.LoadScene(gameController.instance.RandomScene());
+            //}
         }
     }
 }

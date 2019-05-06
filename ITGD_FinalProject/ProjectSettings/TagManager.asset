@@ -8,6 +8,9 @@ TagManager:
   - brick
   - apple
   - tree
+  - brickf
+  - applef
+  - treef
   layers:
   - Default
   - TransparentFX

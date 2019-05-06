@@ -73,32 +73,32 @@ public class gameController : MonoBehaviour
         }
     }
 
-    public int RandomScene()
-    {
-        int randomNum = Random.Range(1, 4);
-        if (randomNum == lastGame)
-        {
-            randomNum = Random.Range(1, 4);
-            if (randomNum == lastGame)
-            {
-                randomNum = 2;
-                currentScene = randomNum;
-                return randomNum;
+    //public int RandomScene()
+    //{
+    //    int randomNum = Random.Range(1, 4);
+    //    if (randomNum == lastGame)
+    //    {
+    //        randomNum = Random.Range(1, 4);
+    //        if (randomNum == lastGame)
+    //        {
+    //            randomNum = 2;
+    //            currentScene = randomNum;
+    //            return randomNum;
                 
-            }
-            else
-            {
-                currentScene = randomNum;
-                return randomNum;
-            }
-        }
-        else
-        {
-            currentScene = randomNum;
-            return randomNum;
-        }
+    //        }
+    //        else
+    //        {
+    //            currentScene = randomNum;
+    //            return randomNum;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        currentScene = randomNum;
+    //        return randomNum;
+    //    }
 
-    }
+    //}
 
     public void GoToStats()
     {
@@ -123,6 +123,10 @@ public class gameController : MonoBehaviour
     }
     public void ForwardAScene() //when you wanna go forward one scene
     {
+       if (currentScene == 3)
+        {
+            currentScene = 1;
+        }
         if (currentScene != SceneManager.sceneCountInBuildSettings - 1)
         {
             currentScene += 1;
