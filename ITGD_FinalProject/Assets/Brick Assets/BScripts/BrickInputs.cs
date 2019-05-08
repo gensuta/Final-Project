@@ -213,7 +213,7 @@ public class BrickInputs : MonoBehaviour
         Debug.Log("bC: " + bC);
         Debug.Log("nextBrick: " + nextBrick);
         newPos = new Vector3(0 + (bC * nextBrick * 15), -1.5f);
-        topRow = Random.Range(0, 11);
+        topRow = Random.Range(0, 10);
         submitB = Random.Range(0, 2);
         Instantiate(Brick, newPos, Quaternion.identity);
         phase = 1;

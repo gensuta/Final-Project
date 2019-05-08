@@ -41,7 +41,12 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!didKeep)
+        if (Input.GetKeyDown(KeyCode.Space) && rounds >= 4)
+        {
+            SceneManager.LoadScene(5);
+        }
+
+            if (!didKeep)
         {
             DontDestroyOnLoad(gameObject);
             didKeep = true;
@@ -123,10 +128,20 @@ public class gameController : MonoBehaviour
     }
     public void ForwardAScene() //when you wanna go forward one scene
     {
-       if (currentScene == 3)
+        if (currentScene != SceneManager.sceneCountInBuildSettings - 1)
         {
-            currentScene = 1;
+            currentScene += 1;
+            SceneManager.LoadScene(currentScene);
         }
+    }
+
+    public void ProgressScene()
+    {
+        if (instance.numGames == 0)
+        {
+            currentScene = 0;
+        }
+
         if (currentScene != SceneManager.sceneCountInBuildSettings - 1)
         {
             currentScene += 1;
