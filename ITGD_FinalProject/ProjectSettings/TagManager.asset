@@ -12,6 +12,7 @@ TagManager:
   - timer
   - brick
   - apple
+  - round
   layers:
   - Default
   - TransparentFX
