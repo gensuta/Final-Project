@@ -11,13 +11,17 @@ public class appleManager : MonoBehaviour
     public GameObject pineCone;
     public float resetNum; // time gets reset to this number
     public float originalRestNum;
+    public float pineConeWaitTime;
+    public float pineResetNum;
+  
 
     handController hc;
 
     // Start is called before the first frame update
     void Start()
     {
-        hc = FindObjectOfType<handController>(); 
+        hc = FindObjectOfType<handController>();
+      
         originalRestNum = resetNum;
     }
 
@@ -26,6 +30,7 @@ public class appleManager : MonoBehaviour
     {
         timer -= Time.deltaTime;
         waitTime -= Time.deltaTime;
+        pineConeWaitTime -= Time.deltaTime;
 
         if(timer > 0f)
         {
@@ -44,10 +49,19 @@ public class appleManager : MonoBehaviour
                 }
 
                 waitTime = resetNum;
-
+         
+            }
+            if (pineConeWaitTime <= 0)
+            {
                 int x2 = Random.Range(-8, 8);
-                randomPos = new Vector3(x2, 6, 0f);
-                Instantiate(pineCone, randomPos, Quaternion.identity);
+                Vector3 randomPos2 = new Vector3(x2, 6, 0f);
+                Instantiate(pineCone, randomPos2, Quaternion.identity);
+
+                if (pineResetNum < -5f)
+                {
+                    pineResetNum = 1f;
+                }
+                pineConeWaitTime = pineResetNum;
             }
         }
         else

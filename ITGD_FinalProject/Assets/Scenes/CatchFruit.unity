@@ -185,12 +185,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 30
-  waitTime: 0
+  waitTime: 1
   apple: {fileID: 2229515078734261946, guid: 76bcc7fd13be34638a9504e1e606375f, type: 3}
   pineCone: {fileID: 2976540501999234299, guid: 870b685713450cf41a440a14d1ad731f,
     type: 3}
   resetNum: 1
   originalRestNum: 0
+  pineConeWaitTime: 1
+  pineResetNum: 2
 --- !u!4 &140876005
 Transform:
   m_ObjectHideFlags: 0

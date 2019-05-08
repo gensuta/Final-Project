@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class handController : MonoBehaviour
 {
-
+    public GameObject player;
+    SpriteRenderer playerSprite;
     public int numCaught;
+    public float timer;
 
     public int combo; //checking how many u caught in succession!
 
     // Start is called before the first frame update
     void Start()
     {
+        playerSprite = player.GetComponent<SpriteRenderer>();
         
     }
 
@@ -34,6 +37,7 @@ public class handController : MonoBehaviour
         if (collision.gameObject.tag == "pinecone")
         {
             numCaught -= 1;
+           
         }
         else
         {
