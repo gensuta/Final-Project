@@ -437,12 +437,12 @@ PrefabInstance:
     - target: {fileID: 6678176544429817005, guid: 498e82f4790bf984682c776df34300cc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 786
+      value: 785
       objectReference: {fileID: 0}
     - target: {fileID: 6678176544429817005, guid: 498e82f4790bf984682c776df34300cc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 333
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 6678176544429817005, guid: 498e82f4790bf984682c776df34300cc,
         type: 3}
@@ -643,6 +643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tree: {fileID: 0}
+  brick: {fileID: 0}
+  apple: {fileID: 0}
   round: 0
 --- !u!114 &1594573345
 MonoBehaviour:
@@ -778,6 +781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tree: {fileID: 0}
+  brick: {fileID: 0}
+  apple: {fileID: 0}
   round: 0
 --- !u!1 &1968369785
 GameObject:

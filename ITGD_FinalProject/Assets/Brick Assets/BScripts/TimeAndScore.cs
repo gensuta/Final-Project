@@ -7,9 +7,9 @@ public class TimeAndScore : MonoBehaviour
 {
     Text text;
     Image image;
-    public Image tree;
-    public Image brick;
-    public Image apple;
+    public Sprite tree;
+    public Sprite brick;
+    public Sprite apple;
     public int round;
     //the static timeLeft was moved to the gameController since gameController is in every scene
     // meaning it can also be reset during the stats screen
@@ -82,7 +82,20 @@ public class TimeAndScore : MonoBehaviour
             }
         }
 
-        if (image.tag ==)
+        if (this.image.tag == "tree")
+        {
+            image.sprite = tree;
+        }
+
+        if (this.image.tag == "brick")
+        {
+            image.sprite = brick;
+        }
+
+        if (this.image.tag == "apple")
+        {
+            image.sprite = apple;
+        }
 
         // Press the space key to change the Text message.
         if (text.tag == "brick")
