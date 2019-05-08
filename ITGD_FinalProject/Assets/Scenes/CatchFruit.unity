@@ -192,7 +192,7 @@ MonoBehaviour:
   resetNum: 1
   originalRestNum: 0
   pineConeWaitTime: 1
-  pineResetNum: 2
+  pineResetNum: 0.6
 --- !u!4 &140876005
 Transform:
   m_ObjectHideFlags: 0
@@ -501,7 +501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66666343130d4416f9a338215b29aa24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   numCaught: 0
+  timer: 0
   combo: 0
 --- !u!212 &1263672160
 SpriteRenderer:
