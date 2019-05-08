@@ -7,9 +7,6 @@ public class TimeAndScore : MonoBehaviour
 {
     Text text;
     Image image;
-    public Sprite tree;
-    public Sprite brick;
-    public Sprite apple;
     public int round;
     //the static timeLeft was moved to the gameController since gameController is in every scene
     // meaning it can also be reset during the stats screen
@@ -46,56 +43,6 @@ public class TimeAndScore : MonoBehaviour
             text.text = "game over";
         }
 
-        if (gameController.instance.currentScene == 1)
-        {
-            if (this.text.tag == "brick" || this.text.tag == "apple")
-            {
-                this.text.tag = "tree";
-            }
-            if (this.image.tag == "brick" || this.image.tag == "apple")
-            {
-                this.image.tag = "tree";
-            }
-        }
-
-        if (gameController.instance.currentScene == 2)
-        {
-            if (this.text.tag == "tree" || this.text.tag == "apple")
-            {
-                this.text.tag = "brick";
-            }
-            if (this.image.tag == "tree" || this.image.tag == "apple")
-            {
-                this.image.tag = "brick";
-            }
-        }
-
-        if (gameController.instance.currentScene == 3)
-        {
-            if (this.text.tag == "brick" || this.text.tag == "tree")
-            {
-                this.text.tag = "apple";
-            }
-            if (this.image.tag == "brick" || this.image.tag == "tree")
-            {
-                this.image.tag = "apple";
-            }
-        }
-
-        if (this.image.tag == "tree")
-        {
-            image.sprite = tree;
-        }
-
-        if (this.image.tag == "brick")
-        {
-            image.sprite = brick;
-        }
-
-        if (this.image.tag == "apple")
-        {
-            image.sprite = apple;
-        }
 
         // Press the space key to change the Text message.
         if (text.tag == "brick")
@@ -131,6 +78,11 @@ public class TimeAndScore : MonoBehaviour
         if (text.tag == "timer")
         {
             text.text = "Time: " + gameController.instance.timeLeft.ToString("#.0");
+        }
+
+        if (text.tag == "round")
+        {
+            text.text = "Round: " + round;
         }
     }
 }
