@@ -13,7 +13,12 @@ public class statsController : MonoBehaviour
     void Start()
     {
         gameController.instance.numGames += 1;
-        if (gameController.instance.numGames == 3)
+        if (gameController.instance.rounds >= 4)
+        {
+            theText.text = "Game Over!";
+            gameController.instance.currentScene = 5;
+        }
+        else if (gameController.instance.numGames == 3)
         {
             gameController.instance.rounds += 1;
             gameController.instance.numGames = 0;
@@ -55,11 +60,11 @@ public class statsController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && gameController.instance.rounds <= 3)
         {
             //if (gameController.instance.rounds == 0)
             //{
-                gameController.instance.ForwardAScene();
+                gameController.instance.ProgressScene();
             //}
             //else
             //{

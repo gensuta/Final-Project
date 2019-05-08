@@ -42,6 +42,14 @@ public class TimeAndScore : MonoBehaviour
             text.text = "game over";
         }
 
+        if (gameController.instance.currentScene == 0)
+        {
+            if (text.tag == "brick" || text.tag == "apple")
+            {
+                this.text.tag = "tree";
+            }
+        }
+
         // Press the space key to change the Text message.
         if (text.tag == "brick")
         {
@@ -75,7 +83,7 @@ public class TimeAndScore : MonoBehaviour
 
         if (text.tag == "timer")
         {
-            text.text = gameController.instance.timeLeft.ToString("#.0");
+            text.text = "Time: " + gameController.instance.timeLeft.ToString("#.0");
         }
     }
 }
