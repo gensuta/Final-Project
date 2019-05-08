@@ -61,7 +61,6 @@ public class treeScript : MonoBehaviour
                     mC.treesCut += 1;
                     gameController.instance.woodCut = mC.treesCut;
 
-                    Debug.Log("u got wood!");
                     anim.SetInteger("whichAnim", -1); // -1 means fade out and die
                     didAdd = true;
                     bc.enabled = false;

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CutWood.unity
     guid: f2f41f3795c884b109e29d18394b34ca
   - enabled: 1
-    path: Assets/Brick Assets/BrickGame.unity
+    path: Assets/Scenes/BrickGame.unity
     guid: 3ad0a2c01e1e3af4e95a93c7fd476a16
   - enabled: 1
     path: Assets/Scenes/CatchFruit.unity

@@ -11,10 +11,16 @@ public class treeManager : MonoBehaviour
     public int totalTrees; //the total number of trees getting created
     public GameObject weak_treePrefab;
     public GameObject strong_treePrefab;
+    public Vector3 weakTreePos;
+    public Vector3 strongTreePos;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        weakTreePos = new Vector3(2.6f, 0.7f, 0);
+        strongTreePos = new Vector3(2.5f, 0, 0);
+
         treeScripts = new List<treeScript>();
         treeObjects = new List<GameObject>();
         CreateTrees(); // creating trees
@@ -36,7 +42,7 @@ public class treeManager : MonoBehaviour
 
             if (i == 0)
             {
-                thisTree = Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
+                thisTree = Instantiate(weak_treePrefab, weakTreePos, Quaternion.identity, transform) as GameObject;
                 randomNum = 0;
 
             }
@@ -46,11 +52,11 @@ public class treeManager : MonoBehaviour
 
                 if (randomNum == 0) // 0 means weak
                 {
-                    thisTree = Instantiate(weak_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
+                    thisTree = Instantiate(weak_treePrefab, weakTreePos, Quaternion.identity, transform) as GameObject;
                 }
                 else // other nums are strong!
                 {
-                    thisTree = Instantiate(strong_treePrefab, Vector3.zero, Quaternion.identity, transform) as GameObject;
+                    thisTree = Instantiate(strong_treePrefab, strongTreePos, Quaternion.identity, transform) as GameObject;
                 }
             }
 
