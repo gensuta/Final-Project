@@ -8,7 +8,13 @@ TagManager:
   - brick
   - apple
   - tree
+<<<<<<< HEAD
+  - brickf
+  - applef
+  - treef
+=======
   - pinecone
+>>>>>>> origin/master
   layers:
   - Default
   - TransparentFX

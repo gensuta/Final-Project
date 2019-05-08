@@ -29,6 +29,10 @@ public class handController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+<<<<<<< HEAD
+        combo += 1;
+        numCaught += 1;
+=======
         
         if (collision.gameObject.tag == "pinecone")
         {
@@ -41,6 +45,7 @@ public class handController : MonoBehaviour
             combo += 1;
         }
 
+>>>>>>> origin/master
         gameController.instance.applesCaught = numCaught;
         Destroy(collision.gameObject); // bye bye apple!
     }

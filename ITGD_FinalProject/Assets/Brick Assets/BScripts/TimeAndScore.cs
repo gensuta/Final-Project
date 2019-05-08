@@ -15,7 +15,6 @@ public class TimeAndScore : MonoBehaviour
         round = gameController.instance.rounds;
         text = gameObject.GetComponent<Text>();
         text.text = "0";
-
     }
 
     void Update()
@@ -30,7 +29,6 @@ public class TimeAndScore : MonoBehaviour
             Time.timeScale = 2f;
 
         }
-
         if (round == 2) // third
         {
             Time.timeScale = 3f;
@@ -58,6 +56,21 @@ public class TimeAndScore : MonoBehaviour
         if (text.tag == "tree")
         {
             text.text = "Score: " + gameController.instance.woodCut;
+        }
+
+        if (text.tag == "brickf")
+        {
+            text.text = "Total Bricks: " + gameController.instance.storedBricks;
+        }
+
+        if (text.tag == "applef")
+        {
+            text.text = "Total Apples: " + gameController.instance.storedApples;
+        }
+
+        if (text.tag == "treef")
+        {
+            text.text = "Total Trees: " + gameController.instance.storedWood;
         }
 
         if (text.tag == "timer")
