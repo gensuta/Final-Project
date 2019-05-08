@@ -22,7 +22,18 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
     public bool canCut;
 
+    public bool canshakeScreen;
+
     public Animator playerAnim;
+
+    public float shakeMagnitude; // by how much r u being shooketh
+    public Transform shakeTransform; // what's being shook? (the camera)
+
+    public float shakeTime = 0.5f; // how long u shaking boi?
+
+
+    public AudioClip cut;
+    public AudioClip miss;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +44,27 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
     // Update is called once per frame
     void Update()
     {
-       gameController.instance.woodCut = treesCut;
+
+        // This if statement is for controlling screenshake
+        if(canshakeScreen)
+        {
+            shakeTime -= Time.deltaTime;
+            if (shakeTime <= 0f)
+            {
+                shakeTransform.localPosition = new Vector3(0f, 0f, -10f);
+                canshakeScreen = false;
+            }
+            else
+            {
+                shakeTransform.localPosition = new Vector3(0f, 0f, -10f) + Random.insideUnitSphere * shakeMagnitude;
+            }
+        }
+
+
+
+
+
+        gameController.instance.woodCut = treesCut;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //getting where your mouse is in the actual game
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); // turning that vector 3 into a vector 2 for raycasting sake
@@ -58,49 +89,55 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
 
                 if (mousePos2D.x < currentTreePos.x) //if you're to the LEFT of the tree
                 {
+                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
                     leftPos = transform.position; // lets get that left position!
                 }
-
-
-
-                if (mousePos2D.x > currentTreePos.x) //if you're to the RIGHT of the tree
+                else if (mousePos2D.x > currentTreePos.x) //if you're to the RIGHT of the tree
                 {
+                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
                     rightPos = transform.position; // lets get that right position!
                 }
 
+
                 if (Vector3.Distance(leftPos, currentTreePos) >= maxDist2Tree)
                 {
-                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
+                   
                     canCut = true;
                 }
                 else if (Vector3.Distance(rightPos, currentTreePos) >= maxDist2Tree)
                 {
-                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
                     canCut = true;
                 }
 
-                if (Vector2.Distance(mousePos2D,currentTreePos) <= 2f) // if we're getting close to the tree!
-                {
-                    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
-                }
+                //if (Vector2.Distance(mousePos2D,currentTreePos) <= 2f) // if we're getting close to the tree!
+                //{
+                //    playerAnim.SetInteger("whichAnim", 1); // set the animation to a windup!
+                //}
 
             }
 
             //here ends the distance
 
-
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Camera.main.transform.forward); //storing what we may have hit via raycasting!
 
             if (hit.collider != null)
             {
-                if (hit.collider.gameObject == tM.treeObjects[treesCut] && canCut) 
+                if (canCut) 
                 {
+                    AudioSource.PlayClipAtPoint(cut,Vector3.zero,1f); // play cut sound
+
                     playerAnim.SetInteger("whichAnim", 2); // set the animation to tree hit!
+                    playerAnim.Play(0);
+                    shakeTime = 0.5f; 
+                    canshakeScreen = true;
                     tM.treeScripts[treesCut].treeHP -= 1;
                     ClearDistanceInfo();
                 }
-                else if (hit.collider.gameObject == tM.treeObjects[treesCut] && !canCut)
+
+                else
                 {
+                    AudioSource.PlayClipAtPoint(miss, Vector3.zero, 1f); // play miss ound
+
                     playerAnim.SetInteger("whichAnim", -1); // set the animation to you didnt hit the tree!
                     ClearDistanceInfo();
                 }
