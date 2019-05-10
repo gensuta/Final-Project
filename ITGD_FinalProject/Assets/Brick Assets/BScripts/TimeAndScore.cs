@@ -6,16 +6,21 @@ using UnityEngine.UI;
 public class TimeAndScore : MonoBehaviour
 {
     Text text;
-    Image image;
     public int round;
     //the static timeLeft was moved to the gameController since gameController is in every scene
     // meaning it can also be reset during the stats screen
 
-    void Start()
+    void Awake()
     {
         round = gameController.instance.rounds;
         text = gameObject.GetComponent<Text>();
-        text.text = "0";
+    }
+
+    void Start()
+    {
+        {
+            this.text.text = "0";
+        }
     }
 
     void Update()
@@ -35,54 +40,45 @@ public class TimeAndScore : MonoBehaviour
             Time.timeScale = 3f;
         }
 
-
-        gameController.instance.timeLeft -= Time.deltaTime;
-        if (gameController.instance.timeLeft < 0 && text.tag == "timer")
-        {
-            gameController.instance.GoToStats();
-            text.text = "game over";
-        }
-
-
         // Press the space key to change the Text message.
-        if (text.tag == "brick")
+        if (this.text.tag == "brick")
         {
-            text.text = "Score: " + gameController.instance.bricksDown;
+            this.text.text = "Score: " + gameController.instance.bricksDown;
         }
 
-        if (text.tag == "apple")
+        if (this.text.tag == "apple")
         {
-            text.text = "Score: " + gameController.instance.applesCaught;
+            this.text.text = "Score: " + gameController.instance.applesCaught;
         }
 
-        if (text.tag == "tree")
+        if (this.text.tag == "tree")
         {
-            text.text = "Score: " + gameController.instance.woodCut;
+            this.text.text = "Score: " + gameController.instance.woodCut;
         }
 
-        if (text.tag == "brickf")
+        if (this.text.tag == "brickf")
         {
-            text.text = "Total Bricks: " + gameController.instance.storedBricks;
+            this.text.text = "Total Bricks: " + gameController.instance.storedBricks;
         }
 
-        if (text.tag == "applef")
+        if (this.text.tag == "applef")
         {
-            text.text = "Total Apples: " + gameController.instance.storedApples;
+            this.text.text = "Total Apples: " + gameController.instance.storedApples;
         }
 
-        if (text.tag == "treef")
+        if (this.text.tag == "treef")
         {
-            text.text = "Total Trees: " + gameController.instance.storedWood;
+            this.text.text = "Total Trees: " + gameController.instance.storedWood;
         }
 
-        if (text.tag == "timer")
+        if (this.text.tag == "timer")
         {
-            text.text = "Time: " + gameController.instance.timeLeft.ToString("#.0");
+            this.text.text = "Time: " + gameController.instance.timeLeft.ToString("#.0");
         }
 
-        if (text.tag == "round")
+        if (this.text.tag == "round")
         {
-            text.text = "Round: " + round;
+            this.text.text = "Round: " + (round + 1);
         }
     }
 }

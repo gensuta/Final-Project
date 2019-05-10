@@ -10,7 +10,8 @@ public class BrickInputs : MonoBehaviour
     public GameObject Brick;
     public int brickCount;
     public Vector3 newPos;
-
+    Animator m_Animator;
+    public static bool lerpNow;
     public int topRow;
     public int botRow;
     public int submitB;
@@ -20,6 +21,7 @@ public class BrickInputs : MonoBehaviour
     {
         brickCount = 0;
         CutWood();
+        m_Animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 1 && !isTop)
@@ -40,6 +43,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.Q))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -50,6 +54,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 2 && !isTop)
@@ -57,6 +62,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.W))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -67,6 +73,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 3 && !isTop)
@@ -74,6 +81,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.E))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -84,6 +92,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 4 && !isTop)
@@ -91,6 +100,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.R))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -101,6 +111,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 5 && !isTop)
@@ -108,6 +119,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.T))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -118,6 +130,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 6 && !isTop)
@@ -125,6 +138,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.Y))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -135,6 +149,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 7 && !isTop)
@@ -142,6 +157,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.U))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -152,6 +168,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 8 && !isTop)
@@ -159,6 +176,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.I))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -169,6 +187,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 9 && !isTop)
@@ -176,6 +195,7 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.O))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
@@ -186,6 +206,7 @@ public class BrickInputs : MonoBehaviour
                 phase = 2;
                 isTop = false;
                 botRow = topRow;
+                m_Animator.SetInteger("phase", 1);
             }
         }
         if (botRow == 0 && !isTop)
@@ -193,30 +214,42 @@ public class BrickInputs : MonoBehaviour
             if (phase == 2 && Input.GetKeyDown(KeyCode.P))
             {
                 phase = 3;
+                m_Animator.SetInteger("phase", 2);
             }
         }
 
         if (phase == 3 && Input.GetMouseButtonDown(submitB))
         {
+            m_Animator.SetInteger("phase", 3);
             brickCount++;
             gameController.instance.bricksDown = brickCount;
             CutWood();
             
         }
 
+       
+        if (gameController.instance.timeLeft < 0)
+        {
+            gameController.instance.GoToStats();
+        }
+
     }
+
 
     void CutWood()
     {
+        lerpNow = true;
         float bC = (float)brickCount;
         float nextBrick = Brick.GetComponent<BoxCollider2D>().size.x;
         Debug.Log("bC: " + bC);
         Debug.Log("nextBrick: " + nextBrick);
-        newPos = new Vector3(0 + (bC * nextBrick * 15), -1.5f);
+        newPos = new Vector3(-5.1f + (bC * nextBrick * 10), 1.35f);
         topRow = Random.Range(0, 10);
         submitB = Random.Range(0, 2);
         Instantiate(Brick, newPos, Quaternion.identity);
         phase = 1;
         isTop = true;
+        gameController.instance.bricksDown = brickCount;
+        
     }
 }

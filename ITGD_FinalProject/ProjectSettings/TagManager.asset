@@ -13,6 +13,10 @@ TagManager:
   - brick
   - apple
   - round
+  - brickani
+  - input1
+  - input2
+  - input3
   layers:
   - Default
   - TransparentFX

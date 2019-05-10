@@ -1,0 +1,992 @@
+fileFormatVersion: 2
+guid: 426bace4cfebe47429cb1d829ec823f6
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Keys-for-Brick-by-Brick-sheet_0
+    21300002: Keys-for-Brick-by-Brick-sheet_1
+    21300004: Keys-for-Brick-by-Brick-sheet_2
+    21300006: Keys-for-Brick-by-Brick-sheet_3
+    21300008: Keys-for-Brick-by-Brick-sheet_4
+    21300010: Keys-for-Brick-by-Brick-sheet_5
+    21300012: Keys-for-Brick-by-Brick-sheet_6
+    21300014: Keys-for-Brick-by-Brick-sheet_7
+    21300016: Keys-for-Brick-by-Brick-sheet_8
+    21300018: Keys-for-Brick-by-Brick-sheet_9
+    21300020: Keys-for-Brick-by-Brick-sheet_10
+    21300022: Keys-for-Brick-by-Brick-sheet_11
+    21300024: Keys-for-Brick-by-Brick-sheet_12
+    21300026: Keys-for-Brick-by-Brick-sheet_13
+    21300028: Keys-for-Brick-by-Brick-sheet_14
+    21300030: Keys-for-Brick-by-Brick-sheet_15
+    21300032: Keys-for-Brick-by-Brick-sheet_16
+    21300034: Keys-for-Brick-by-Brick-sheet_17
+    21300036: Keys-for-Brick-by-Brick-sheet_18
+    21300038: Keys-for-Brick-by-Brick-sheet_19
+    21300040: Keys-for-Brick-by-Brick-sheet_20
+    21300042: Keys-for-Brick-by-Brick-sheet_21
+    21300044: Keys-for-Brick-by-Brick-sheet_22
+    21300046: Keys-for-Brick-by-Brick-sheet_23
+    21300048: Keys-for-Brick-by-Brick-sheet_24
+    21300050: Keys-for-Brick-by-Brick-sheet_25
+    21300052: Keys-for-Brick-by-Brick-sheet_26
+    21300054: Keys-for-Brick-by-Brick-sheet_27
+    21300056: Keys-for-Brick-by-Brick-sheet_28
+    21300058: Keys-for-Brick-by-Brick-sheet_29
+    21300060: Keys-for-Brick-by-Brick-sheet_30
+    21300062: Keys-for-Brick-by-Brick-sheet_31
+    21300064: Keys-for-Brick-by-Brick-sheet_32
+    21300066: Keys-for-Brick-by-Brick-sheet_33
+    21300068: Keys-for-Brick-by-Brick-sheet_34
+    21300070: Keys-for-Brick-by-Brick-sheet_35
+    21300072: Keys-for-Brick-by-Brick-sheet_36
+    21300074: Keys-for-Brick-by-Brick-sheet_37
+    21300076: Keys-for-Brick-by-Brick-sheet_38
+    21300078: Keys-for-Brick-by-Brick-sheet_39
+    21300080: Keys-for-Brick-by-Brick-sheet_40
+    21300082: Keys-for-Brick-by-Brick-sheet_41
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fde98011609ce4dbd5eaf9e6ede93d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cd78fc1aa6e6b4dbaf2315ba55883f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ffb9c7988c0f74789d8c6b6b1f3daf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01db21a20ac4a7c4f9b4c1489fbf884a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09cd0eaba9b14c41b946f55f653272a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ee7d98496c326408d47a7bd7ade716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385977b6ededae04ba1e9d6953f07321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81debfbb086a02640b4796315c10e98c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fda31fdb7c13e54abad93d9a69f71b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cfec2472ef4534cb017f4dfbecac6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a821a2192c67bac4e84a9698760523ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f17f13fb44ff643b292fe43c166d69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f636304faf48e4f4c937ff23eda486e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475a355e774c8bd45b18b17a7b555275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264754d39c433fc44b1404e0e5531e32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09171cc962eadc149a1a195262a0b209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 82
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687813ce7cd71a4468b279980567c2bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 82
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da08adeee1b628e479c3eb42b372389a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 82
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23310a78e26331f44853df51bf4c1901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 82
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ba0c32288f3444181208b953eb1bed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 81
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9073ffe18ccdf4c4488a15fae9fd0c4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 81
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e2005deff98844c800cc670a6c54b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 82
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e97ce3d2e91584bb0234d55ec77709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 82
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4222f9d41a70b6c489056d45529723e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d61976fe79cae54f81e3494ccff9bdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d03d0973ede550458f12b2124beeaac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa155b119fc57d43903ff34f724c2d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c945e32ab4bb1f34da35c019fab551c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efe4fd0a4a67c740bc65694002b3a79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71a8703a0be04c48a562adc45144343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9dec35c7aa251438b30895d19bfc25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389457ac6d1d1c74b87451f421ed6724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb34d4fcf2f7a62409cfefb7cb0ddb44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86473f56787b30f4a88232eaa0fa2c1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b034f9851d943e469212a3fdf461ec6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196aa50a6b0562340881158167053155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3258f410e1aefd74d958cb14d9855db3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240c54ffd2dbde249a20919a5e196aad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b676ae9e0ea3014db658252437ca0cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_39
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c22d87f559313441a31c6ef2ef88c90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_40
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 34
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84087b68e3ed3d5448eeb492c9efe4b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keys-for-Brick-by-Brick-sheet_41
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 34
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d8e73be2c3e4143a180e115f7791b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d06b7fa86489e444daf0ce62003c285f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
