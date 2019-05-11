@@ -9,15 +9,28 @@ public class CameraLerp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 position = this.transform.position;
-        float interpolation = speed * Time.deltaTime;
-        position.x = Mathf.Lerp(this.transform.position.x, GameObject.Find("BrickManager").GetComponent<BrickInputs>().newPos.x, interpolation);
-        this.transform.position = position;
+       
+
+        if (this.gameObject.tag == "brickani")
+        {
+            Vector3 position = this.transform.position;
+            float interpolation = speed * Time.deltaTime;
+            position.x = Mathf.Lerp((this.transform.position.x), GameObject.Find("BrickManager").GetComponent<BrickInputs>().newPos.x, interpolation);
+            this.transform.position = position;
+        }
+
+        else
+        {
+            Vector3 position = this.transform.position;
+            float interpolation = speed * Time.deltaTime;
+            position.x = Mathf.Lerp((this.transform.position.x), GameObject.Find("BrickManager").GetComponent<BrickInputs>().newPos.x + 5.1f, interpolation);
+            this.transform.position = position;
+        }
     }
 }

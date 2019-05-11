@@ -60,11 +60,23 @@ public class statsController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && gameController.instance.rounds <= 3)
+        if (Input.GetKeyDown(KeyCode.Space) && gameController.instance.rounds <= 2)
         {
             //if (gameController.instance.rounds == 0)
             //{
                 gameController.instance.ProgressScene();
+            //}
+            //else
+            //{
+            //    SceneManager.LoadScene(gameController.instance.RandomScene());
+            //}
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && gameController.instance.rounds >= 3)
+        {
+            //if (gameController.instance.rounds == 0)
+            //{
+            gameController.instance.FinalScene();
             //}
             //else
             //{

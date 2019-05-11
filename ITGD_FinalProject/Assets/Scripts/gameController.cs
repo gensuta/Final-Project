@@ -41,6 +41,7 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gameController.instance.timeLeft -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Space) && rounds >= 4)
         {
             SceneManager.LoadScene(5);
@@ -147,6 +148,11 @@ public class gameController : MonoBehaviour
             currentScene += 1;
             SceneManager.LoadScene(currentScene);
         }
+    }
+
+    public void FinalScene()
+    {
+        SceneManager.LoadScene(5);
     }
     public void ResetScene()
     {

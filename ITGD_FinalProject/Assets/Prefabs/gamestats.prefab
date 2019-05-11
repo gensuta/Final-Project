@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6678176543370528694}
   - component: {fileID: 6678176543370528696}
-  - component: {fileID: 6453166815358821146}
   - component: {fileID: 6678176543370528697}
   m_Layer: 5
   m_Name: Image
@@ -46,22 +45,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6678176543370528695}
   m_CullTransparentMesh: 0
---- !u!114 &6453166815358821146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678176543370528695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tree: {fileID: 21300000, guid: 42f523c3417c44125879febebc30410a, type: 3}
-  brick: {fileID: 21300000, guid: 73e5a808addb37c43aa491b5d3c65e70, type: 3}
-  apple: {fileID: 21300000, guid: 0bc08aae052b84c0eb3fd633c3597a92, type: 3}
-  round: 0
 --- !u!114 &6678176543370528697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,8 +84,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6678176543478555897}
   - component: {fileID: 6678176543478555898}
-  - component: {fileID: 7365842180352434173}
   - component: {fileID: 6678176543478555896}
+  - component: {fileID: 8102518227726520508}
   m_Layer: 5
   m_Name: Text (3)
   m_TagString: timer
@@ -137,22 +120,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6678176543478555894}
   m_CullTransparentMesh: 0
---- !u!114 &7365842180352434173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678176543478555894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tree: {fileID: 21300000, guid: 42f523c3417c44125879febebc30410a, type: 3}
-  brick: {fileID: 21300000, guid: 73e5a808addb37c43aa491b5d3c65e70, type: 3}
-  apple: {fileID: 21300000, guid: 0bc08aae052b84c0eb3fd633c3597a92, type: 3}
-  round: 0
 --- !u!114 &6678176543478555896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +154,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Time: '
+--- !u!114 &8102518227726520508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678176543478555894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  round: 0
 --- !u!1 &6678176544264712627
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,8 +177,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6678176544264712626}
   - component: {fileID: 6678176544264712631}
-  - component: {fileID: 5052801895714023019}
   - component: {fileID: 6678176544264712629}
+  - component: {fileID: 4109079715513639823}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: round
@@ -233,22 +213,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6678176544264712627}
   m_CullTransparentMesh: 0
---- !u!114 &5052801895714023019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678176544264712627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tree: {fileID: 21300000, guid: 42f523c3417c44125879febebc30410a, type: 3}
-  brick: {fileID: 21300000, guid: 73e5a808addb37c43aa491b5d3c65e70, type: 3}
-  apple: {fileID: 21300000, guid: 0bc08aae052b84c0eb3fd633c3597a92, type: 3}
-  round: 0
 --- !u!114 &6678176544264712629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +247,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Round: '
+--- !u!114 &4109079715513639823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678176544264712627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  round: 0
 --- !u!1 &6678176544429817002
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,8 +306,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6678176544458667861}
   - component: {fileID: 6678176544458667862}
-  - component: {fileID: 673725042757773977}
   - component: {fileID: 6678176544458667860}
+  - component: {fileID: 2151520071064508339}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: tree
@@ -365,22 +342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6678176544458667858}
   m_CullTransparentMesh: 0
---- !u!114 &673725042757773977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678176544458667858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tree: {fileID: 21300000, guid: 42f523c3417c44125879febebc30410a, type: 3}
-  brick: {fileID: 21300000, guid: 73e5a808addb37c43aa491b5d3c65e70, type: 3}
-  apple: {fileID: 21300000, guid: 0bc08aae052b84c0eb3fd633c3597a92, type: 3}
-  round: 0
 --- !u!114 &6678176544458667860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,6 +376,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score: '
+--- !u!114 &2151520071064508339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678176544458667858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3956d47b733e9dc42a19655a8f298d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  round: 0
 --- !u!1 &6678176544543278345
 GameObject:
   m_ObjectHideFlags: 0
