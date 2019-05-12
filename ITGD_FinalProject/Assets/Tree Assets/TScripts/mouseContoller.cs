@@ -134,11 +134,10 @@ public class mouseContoller : MonoBehaviour //CONTROLS MOUSE FOR WOOD GAME!
                     ClearDistanceInfo();
                 }
 
-                else
+                else if (!canshakeScreen && !canCut)
                 {
-                    AudioSource.PlayClipAtPoint(miss, Vector3.zero, 1f); // play miss ound
-
                     playerAnim.SetInteger("whichAnim", -1); // set the animation to you didnt hit the tree!
+                    AudioSource.PlayClipAtPoint(miss, Vector3.zero, 1f); // play miss ound
                     ClearDistanceInfo();
                 }
             }

@@ -41,7 +41,6 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameController.instance.timeLeft -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Space) && rounds >= 4)
         {
             SceneManager.LoadScene(5);
@@ -51,6 +50,11 @@ public class gameController : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
             didKeep = true;
+        }
+
+        if (GetSceneName() != "StatsScreen" || GetSceneName() != "TitleScreen")
+        {
+            timeLeft -= Time.deltaTime;
         }
 
         if (GetSceneName() == "TitleScreen")
