@@ -25,7 +25,7 @@ public class gameController : MonoBehaviour
 
     public float timeLeft = 30;
 
-    void Start()
+    void Awake()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
         if (instance == null)

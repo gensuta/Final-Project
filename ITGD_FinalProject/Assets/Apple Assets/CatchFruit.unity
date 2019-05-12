@@ -149,6 +149,7 @@ MonoBehaviour:
   originalRestNum: 0
   pineConeWaitTime: 1
   pineResetNum: 2
+  fallSnd: {fileID: 8300000, guid: c803e58bceae243fe8a69b5e7be66e01, type: 3}
 --- !u!4 &140876005
 Transform:
   m_ObjectHideFlags: 0
@@ -290,6 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66666343130d4416f9a338215b29aa24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catchSound: {fileID: 8300000, guid: 01ff757ddb56941edb6892b17167b54f, type: 3}
+  hitSound: {fileID: 8300000, guid: 030bd70d53c3c47a79956d9de2603e83, type: 3}
+  particles: {fileID: 0}
   player: {fileID: 1263672157}
   numCaught: 0
   timer: 0

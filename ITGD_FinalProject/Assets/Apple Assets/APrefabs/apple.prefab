@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4166435800126870048}
   - component: {fileID: 7788501436931959300}
   - component: {fileID: 5842929422151000766}
+  - component: {fileID: 4938948958594135199}
   m_Layer: 0
   m_Name: apple
   m_TagString: Untagged
@@ -116,9 +117,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.046872497, y: -0.021286726}
+  m_Offset: {x: -0.008907616, y: -0.021286726}
   serializedVersion: 2
-  m_Radius: 0.34798408
+  m_Radius: 0.3100192
 --- !u!114 &5842929422151000766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,3 +132,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 198f2b04b3482471aac3a96546a40bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missSound: {fileID: 8300000, guid: 7899f84d38b5d4fd8a60d07c4ca725a4, type: 3}
+--- !u!95 &4938948958594135199
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229515078734261946}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6aa2fa839a9084b699e8932a92cdc089, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
