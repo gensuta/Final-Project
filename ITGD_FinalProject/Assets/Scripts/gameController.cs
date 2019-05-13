@@ -46,22 +46,28 @@ public class gameController : MonoBehaviour
             SceneManager.LoadScene(5);
         }
 
-            if (!didKeep)
+        if (!didKeep)
         {
             DontDestroyOnLoad(gameObject);
             didKeep = true;
         }
 
-        if (GetSceneName() != "StatsScreen" || GetSceneName() != "TitleScreen")
+        if (GetSceneName() != "StatsScreen" && GetSceneName() != "TitleScreen")
         {
+            currentScene = SceneManager.GetActiveScene().buildIndex;
             timeLeft -= Time.deltaTime;
         }
 
-        if (GetSceneName() == "TitleScreen")
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (GetSceneName() == "TitleScreen")
             {
-                ForwardAScene();
+                SceneManager.LoadScene(6); // context scene to say a story
+            }
+
+            if (GetSceneName() == "ContextScene")
+            {
+                GoToStats();
             }
         }
 
@@ -78,37 +84,10 @@ public class gameController : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.R))
             {
-                ResetScene();
+                ResetGame();
             }
         }
     }
-
-    //public int RandomScene()
-    //{
-    //    int randomNum = Random.Range(1, 4);
-    //    if (randomNum == lastGame)
-    //    {
-    //        randomNum = Random.Range(1, 4);
-    //        if (randomNum == lastGame)
-    //        {
-    //            randomNum = 2;
-    //            currentScene = randomNum;
-    //            return randomNum;
-                
-    //        }
-    //        else
-    //        {
-    //            currentScene = randomNum;
-    //            return randomNum;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        currentScene = randomNum;
-    //        return randomNum;
-    //    }
-
-    //}
 
     public void GoToStats()
     {
@@ -147,11 +126,32 @@ public class gameController : MonoBehaviour
             currentScene = 0;
         }
 
-        if (currentScene != SceneManager.sceneCountInBuildSettings - 1)
+        if (currentScene > 4)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else if (currentScene != SceneManager.sceneCountInBuildSettings - 1)
         {
             currentScene += 1;
             SceneManager.LoadScene(currentScene);
         }
+    }
+
+    public void ResetGame()
+    {
+        woodCut = 0;
+        applesCaught = 0;
+        bricksDown = 0;
+        storedWood = 0;
+        storedApples = 0;
+        storedBricks = 0;
+        rounds = 0;
+        numGames = 0;
+        timeLeft = 30f;
+        currentScene = 0;
+        lastGame = 0;
+        SceneManager.LoadScene(0);
+
     }
 
     public void FinalScene()

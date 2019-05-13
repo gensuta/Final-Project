@@ -356,7 +356,7 @@ PrefabInstance:
     - target: {fileID: 1540837639851335684, guid: f2154cc19f3374ee0a1f1d3870d5895f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1540837639851335685, guid: f2154cc19f3374ee0a1f1d3870d5895f,
         type: 3}
@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: -103.8}
+  m_AnchoredPosition: {x: -193.99, y: -103.8}
   m_SizeDelta: {x: 400, y: 207.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184273284
@@ -993,6 +993,8 @@ MonoBehaviour:
   topRow: 0
   botRow: 0
   submitB: 0
+  slide: {fileID: 8300000, guid: 92aa12320c5f848019fefcece811ce57, type: 3}
+  slam: {fileID: 8300000, guid: 09497dae9286140d89c62789949da2c5, type: 3}
 --- !u!4 &1968369787
 Transform:
   m_ObjectHideFlags: 0
@@ -1063,15 +1065,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c3fb202c031ecd14aa7b757c32cc97a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.96, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1968369790
@@ -1258,7 +1260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 827.6498, y: -114.460785}
+  m_AnchoredPosition: {x: 790.7, y: -114.460785}
   m_SizeDelta: {x: 507, y: 75.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6678176543363806865
@@ -1282,8 +1284,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 37
+    m_Font: {fileID: 12800000, guid: bc7c01f44c7c248b4a3205ff21aa1cc8, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1396,7 +1398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -94, y: -5}
+  m_AnchoredPosition: {x: -108.6, y: -5}
   m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6678176544190850010
@@ -1434,7 +1436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 827.6498, y: 135.53911}
+  m_AnchoredPosition: {x: 790.7, y: 135.53911}
   m_SizeDelta: {x: 507, y: 75.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6678176544190850012
@@ -1458,8 +1460,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 37
+    m_Font: {fileID: 12800000, guid: bc7c01f44c7c248b4a3205ff21aa1cc8, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1588,7 +1590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 827.6498, y: 10.539055}
+  m_AnchoredPosition: {x: 790.7, y: 10.539055}
   m_SizeDelta: {x: 507, y: 75.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6678176544531473725
@@ -1612,8 +1614,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 37
+    m_Font: {fileID: 12800000, guid: bc7c01f44c7c248b4a3205ff21aa1cc8, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10

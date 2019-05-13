@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HomeScenes/HomeScene.unity
     guid: 2ec9557265a1d401b9f7476a2e0097ff
+  - enabled: 1
+    path: Assets/Scenes/ContextScene.unity
+    guid: 6b79558c1535e4aea96373571c54375e
   m_configObjects: {}

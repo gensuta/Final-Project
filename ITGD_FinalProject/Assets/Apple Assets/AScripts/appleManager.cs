@@ -39,7 +39,7 @@ public class appleManager : MonoBehaviour
 
                 Vector3 randomPos = new Vector3(x, 6, 0f);
                 Instantiate(apple, randomPos, Quaternion.identity);
-                AudioSource.PlayClipAtPoint(fallSnd, Vector3.zero, 1f);
+                AudioSource.PlayClipAtPoint(fallSnd, Vector3.zero, 0.5f);
                
                 resetNum = originalRestNum -= (hc.combo * .025f);
 
@@ -56,7 +56,7 @@ public class appleManager : MonoBehaviour
                 int x2 = Random.Range(-8, 8);
                 Vector3 randomPos2 = new Vector3(x2, 6, 0f);
                 Instantiate(pineCone, randomPos2, Quaternion.identity);
-                AudioSource.PlayClipAtPoint(fallSnd, Vector3.zero, 1f);
+                AudioSource.PlayClipAtPoint(fallSnd, Vector3.zero, 0.5f);
 
                 if (pineResetNum < -5f)
                 {

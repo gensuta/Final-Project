@@ -75,8 +75,10 @@ public class handController : MonoBehaviour
         
         if (collision.gameObject.tag == "pinecone")
         {
-
-            numCaught -= 1;
+            if (numCaught > 0)
+            {
+                numCaught -= 1;
+            }
             gotHit = true;
 
             AudioSource.PlayClipAtPoint(hitSound, Vector3.zero, 1f);

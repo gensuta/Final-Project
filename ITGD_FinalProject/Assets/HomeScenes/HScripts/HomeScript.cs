@@ -69,24 +69,27 @@ public class HomeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     if (Input.GetKeyDown(KeyCode.Space)) //to restart the game
+        {
+            gameController.instance.ResetGame();
+        }
     }
 
     public void House()
     {
         totalRes = gameController.instance.storedApples + gameController.instance.storedBricks + gameController.instance.storedWood;
 
-        if (totalRes >= 205)
+        if (totalRes >= 200)
         {
             sr.sprite = great;
         }
 
-        if (totalRes < 185 && totalRes > 160)
+        if (totalRes < 100 && totalRes > 200)
         {
             sr.sprite = good;
         }
 
-        if (totalRes <= 160)
+        if (totalRes <= 100)
         {
             sr.sprite = bad;
         }
