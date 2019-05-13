@@ -43,7 +43,7 @@ public class appleManager : MonoBehaviour
                
                 resetNum = originalRestNum -= (hc.combo * .025f);
 
-                if(resetNum < -2f)
+                if(resetNum < -1.5f)
                 {
                     resetNum = 1f;
                 }
